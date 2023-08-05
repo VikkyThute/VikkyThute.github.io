@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <form action="">
+        <input id="name" type="text">
+        <input id="age" type="number">
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
+<script>
+    let detail={
+        schooleName:"KNV",
+        batch:2020
+    }
+
+    document.querySelector("form").addEventListener("submit",myFun)
+    arrStudent=[];
+   function myFun(event){
+    event.preventDefault()
+        let s1=Object.create(detail);
+        s1.name=document.querySelector("#name").value;
+        s1.age=document.querySelector("#age").value
+        arrStudent.push(s1);
+        console.log(s1);
+        console.log(s1.batch);
+    }
+</script>
